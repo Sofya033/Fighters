@@ -1,29 +1,44 @@
 <?php
 
-require_once "./AbstractFightersClass.php";
+require_once "AbstractFightersClass.php";
 
 class SwordsmenClass extends AbstractFightersClass{
 
-	private $speed;
+	private string $fighter;
 
-	private $hitPower;
+	private float $speed;
 
-	private $protectionPower;
+	private float $hitPower;
 
-	public function __construct(int $speed, int $hitPower, int $protectionPower)
+	private float $protectionPower;
+
+	public function __construct(string $fighter, float $speed, float $hitPower, float $protectionPower)
 	{
+		$this->fighter = $fighter;
 		$this->speed = $speed;
 		$this->hitPower = $hitPower;
 		$this->protectionPower = $protectionPower;
 	}
 
-	public function getOptions()
+	public function getSpeed() :string
 	{
-		return $this->speed . " " . $this->hitPower . " " . $this->protectionPower;
+		return "Скорость " . $this->fighter . " - " . $this->speed . "; ";
 	}
 
-	public function OutputValues()
+	public function getHitPower() :string
 	{
-		$swordsmen->getOptions();
+		return "Сила удара " . $this->fighter . " - " . $this->hitPower . "; ";
+	}
+
+	public function getProtectionPower() :string
+	{
+		return "Сила защиты " . $this->fighter . " - " . $this->protectionPower . "; ";
+	}
+
+	public function getOptions() :string
+	{
+		return $fighters->getSpeed();
+		return $fighters->getHitPower();
+		return $fighters->getProtectionPower();
 	}
 }
