@@ -4,11 +4,11 @@ require_once "./fighters/SpearmenClass.php";
 require_once "./fighters/ShootersClass.php";
 require_once "./fighters/SwordsmenClass.php";
 
-$fighters = new SpearmenClass(5,5,5);
-var_dump($fighters->OutputValues());
+$fighters = new SpearmenClass("Копейщик",9,7,5);
+var_dump($fighters);
 
-$fighters = new ShootersClass(5,5,5);
-var_dump($fighters->OutputValues());
+$fighters = new ShootersClass("Стрелок",7,6,2);
+var_dump($fighters);
 
-$fighters = new SwordsmenClass(5,5,5);
-var_dump($fighters->OutputValues());
+$fighters = new SwordsmenClass("Мечник",8,10,7);
+var_dump($fighters);
