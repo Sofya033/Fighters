@@ -2,7 +2,7 @@
 
 require_once "AbstractFightersClass.php";
 
-class ShootersClass extends AbstractFightersClass{
+class SpearmenClass extends AbstractFightersClass {
 
 	private string $fighter;
 
@@ -42,3 +42,4 @@ class ShootersClass extends AbstractFightersClass{
 		return $fighters->getProtectionPower();
 	}
 }
+
